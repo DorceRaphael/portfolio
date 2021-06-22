@@ -1,12 +1,14 @@
 /*------------------------------------------- LOADER */
 
-$(window).load(function () {
-  $(".loader-overlay").fadeOut("1000");
-});
+AOS.init();
+
+// $(window).load(function () {
+//   $(".loader-overlay").fadeOut("1000");
+// });
 
 window.addEventListener("DOMContentLoaded", function () {
-  waterEffect();
-  waveEffect();
+  // waterEffect();
+  // waveEffect();
   navSwitch();
 });
 
@@ -66,7 +68,7 @@ function navSwitch() {
 
 /*------------------------------------------- INTERSECTION OBSERVER */
 
-const ratio = 0.8;
+const ratio = 0.95;
 const options = {
   root: null,
   rootMargin: "0px",
@@ -188,8 +190,8 @@ for (var i = 0; i < modalBtn.length; i++) {
   modalBtn[i].onclick = function (e) {
     e.preventDefault();
     modal = document.querySelector(e.currentTarget.getAttribute("href"));
-    nav.classList.add("display-none");
-    modal.classList.add("open-modal");
+    $("nav").fadeOut();
+    $(modal).fadeIn();
   };
 }
 
@@ -198,8 +200,8 @@ for (var i = 0; i < closeBtn.length; i++) {
   closeBtn[i].onclick = function () {
     for (var index in modals) {
       if (typeof modals[index].style !== "undefined")
-        modals[index].classList.remove("open-modal");
-      nav.classList.remove("display-none");
+        $(modals[index]).fadeOut();
+      $("nav").fadeIn();
     }
   };
 }
@@ -209,8 +211,8 @@ window.onclick = function (event) {
   if (event.target.classList.contains("modal-overlay")) {
     for (var index in modals) {
       if (typeof modals[index].style !== "undefined")
-        modals[index].classList.remove("open-modal");
-      nav.classList.remove("display-none");
+        $(modals[index]).fadeOut();
+      $("nav").fadeIn();
     }
   }
 };
