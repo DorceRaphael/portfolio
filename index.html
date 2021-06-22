@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raphael Dorce Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--------------------------------------------- FONT AWESOME -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--------------------------------------------- LOADER -->
+    <div class="loader-overlay">
+      <img src="/images/loader_gold.svg" alt="" />
+    </div>
+
+    <!--------------------------------------------- NAV -->
+
+    <nav>
+      <h1 class="display-none">Raphaël <span class="gold">D</span>orce</h1>
+      <a class="rd-logo" href="index.html">
+        <img src="./images/logo_rd.svg" alt="logo du site de raphael dorce" />
+      </a>
+      <ul class="social-icons">
+        <li>
+          <a
+            class="social-icon"
+            href="https://github.com/DorceRaphael"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            class="social-icon"
+            href="https://www.linkedin.com/in/raphael-dorce-524a32148/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--------------------------------------------- HERO -->
+
+    <section class="hero-section">
+      <article class="hero-article">
+        <h1 class="wave-h1">
+          <span class="gold" style="--i: 1">R</span>
+          <span style="--i: 2">A</span>
+          <span style="--i: 3">P</span>
+          <span style="--i: 4">H</span>
+          <span style="--i: 5">A</span>
+          <span style="--i: 6">Ë</span>
+          <span style="--i: 7">L</span>
+          <span style="--i: 8"> </span>
+          <span class="gold" style="--i: 9">D</span>
+          <span style="--i: 10">O</span>
+          <span style="--i: 11">R</span>
+          <span style="--i: 12">C</span>
+          <span style="--i: 13">E</span>
+        </h1>
+        <h2>Developpeur Web</h2>
+        <h2>Developpeur Web</h2>
+      </article>
+    </section>
+    <!--------------------------------------------- CITATION -->
+
+    <section class="citation-section">
+      <article class="citation-article">
+        <h3>"Be water</h3>
+        <h4 class="wave">
+          水のように流れる。水のように流れる。水のように流れる。水のように流れる。水のように流れる。
+        </h4>
+        <h3>my friend."</h3>
+        <p>- <span class="gold">B</span>ruce <span class="gold">L</span>ee</p>
+      </article>
+    </section>
+    <!--------------------------------------------- INTRO -->
+
+    <section class="intro-section">
+      <article class="intro-article">
+        <p>
+          Je suis un développeur front-end
+          <span class="gold">passionné </span>résidant à Besançon.
+        </p>
+        <p>
+          Formé à l’Access Code School, voici mon
+          <span class="gold">CV </span>pour plus de détails.
+        </p>
+        <a
+          class="cv-btn"
+          href="./images/cv_raphael_dorce.pdf"
+          download="cv_raphael_dorce"
+        >
+          Mon <span class="gold">CV </span><i class="fas fa-download"></i>
+        </a>
+      </article>
+    </section>
+    <!--------------------------------------------- BIENVENUE -->
+
+    <section class="bienvenue-section">
+      <article class="bienvenue-article">
+        <p><span class="gold">B</span>ienvenue sur mon portfolio!</p>
+        <h4 class="wave">
+          いらしゃいます! いらしゃいます! いらしゃいます! いらしゃいます!
+          いらしゃいます!
+        </h4>
+      </article>
+    </section>
+    <!--------------------------------------------- PROJETS -->
+
+    <section class="projets-section">
+      <h2><span class="gold">M</span>es <span class="gold">P</span>rojets</h2>
+      <div class="projets-grid">
+        <!--------------------------------------------- SINGLE PROJET -->
+
+        <article class="projets-article" href="#modal1">
+          <div class="projet-preview">
+            <div
+              class="projet-preview-img"
+              style="
+                background: url(./images/widget_website_preview.png)
+                  center/cover;
+              "
+            ></div>
+            <div class="projet-preview-infos">
+              <p>Projet widgets</p>
+            </div>
+          </div>
+        </article>
+        <!--------------------------------------------- SINGLE PROJET -->
+
+        <article class="projets-article" href="#modal2">
+          <div class="projet-preview">
+            <div
+              class="projet-preview-img"
+              style="
+                background: url(./images/php_website_preview.png) center/cover;
+              "
+            ></div>
+            <div class="projet-preview-infos">
+              <p>Projet php</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!--------------------------------------------- MODALS -->
+
+    <!--------------------------------------------- SINGLE MODAL -->
+
+    <div class="modal-overlay" id="modal1">
+      <div class="modal-container">
+        <article class="modal-projet">
+          <div class="modal-projet-img">
+            <h2>Projet <span class="gold">widgets</span></h2>
+            <img
+              src="/images/widget_website.png"
+              alt="image du site web widget de Raphael Dorce"
+            />
+          </div>
+          <div class="modal-projet-infos">
+            <p>
+              Créer un site web comportant 4 widgets, un widget
+              <span class="gold">météo</span>, un widget de
+              <span class="gold">calculatrice</span>, un widget de
+              <span class="gold">conversion</span>, un widget présentant la
+              <span class="gold">fête du jour</span>.
+            </p>
+            <a
+              href="https://raphaeld.promo-66.codeur.online/widget_website/"
+              target="blank"
+              >Aller sur le <span class="gold">site</span>
+            </a>
+          </div>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </article>
+      </div>
+    </div>
+    <!--------------------------------------------- SINGLE MODAL -->
+
+    <div class="modal-overlay" id="modal2">
+      <div class="modal-container">
+        <article class="modal-projet">
+          <div class="modal-projet-img">
+            <h2>Projet <span class="gold">PHP</span></h2>
+            <img
+              src="/images/php_website.png"
+              alt="image du site web PHP de Raphael Dorce"
+            />
+          </div>
+          <div class="modal-projet-infos">
+            <p>Créer un site d'une page, présentant le PHP.</p>
+            <a href="" target="blank"
+              >Aller sur le <span class="gold">site</span>
+            </a>
+          </div>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </article>
+      </div>
+    </div>
+    <!--------------------------------------------- COMPETENCES -->
+
+    <section class="competences-section">
+      <h2>
+        <span class="gold">M</span>es <span class="gold">C</span>ompétences
+      </h2>
+      <article class="competences-article">
+        <h5>HTML5</h5>
+        <h5>CSS3</h5>
+        <h5>JAVASCRIPT</h5>
+        <h5>PHOTOSHOP</h5>
+        <h5>ILLUSTRATOR</h5>
+        <h5>FIGMA</h5>
+        <h5>PHP</h5>
+      </article>
+    </section>
+    <!--------------------------------------------- FOOTER -->
+
+    <footer>
+      <h2>© 2021 Raphael Dorce.</h2>
+      <h2>All rights reserved.</h2>
+    </footer>
+
+    <!--------------------------------------------- EFFET EAU -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://www.jqueryscript.net/demo/jQuery-Plugin-For-Water-Ripple-Animation-ripples/js/jquery.ripples.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

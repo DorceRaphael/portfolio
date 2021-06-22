@@ -1,0 +1,20 @@
+Rajouter une petite description en dessous de "be like water"
+Faire une maquette de la page qui s'ouvre en cliquant sur les projets, avec une description du projet.
+Ne pas faire le bandeau coullissant en bas pour le copyright.
+Faire que le titre developper web fasse partie du background comme ca il réagit avec l'effet d'eau.
+Rajouter bouton retour sur la page de projet individuelle.
+Changer la police de base en rond.
+
+
+Bonjour, je suis développeur front-end freelance à Besançon.
+Bienvenue sur mon portfolio 
+
+
+FONT
+nova round
+comfortaa
+chivo
+Baloo Thambi 2
+Bai Jamjuree
+Sansation Light
+Rajdhani
