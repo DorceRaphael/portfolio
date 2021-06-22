@@ -62,7 +62,7 @@ a:active {
   left: 0px;
   height: 100%;
   width: 100%;
-  background: url("/images/hero_gradient.png");
+  background: white;
   z-index: 9999;
   cursor: wait;
   display: flex;
