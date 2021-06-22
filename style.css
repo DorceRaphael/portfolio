@@ -288,6 +288,14 @@ nav img {
   padding: 0.25rem 0.25rem;
   font-weight: 100;
   border-bottom: 1px var(--gold) solid;
+  opacity: 0;
+  animation: 1.5s ease-out 1s 1 forwards running fadeIn;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
 }
 
 .hero-article h2:nth-of-type(1) {

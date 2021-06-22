@@ -1,7 +1,5 @@
 /*------------------------------------------- LOADER */
 
-AOS.init();
-
 // $(window).load(function () {
 //   $(".loader-overlay").fadeOut("1000");
 // });

@@ -27,7 +27,7 @@
 
     <!--------------------------------------------- NAV -->
 
-    <nav>
+    <nav data-aos="fade" data-aos-duration="2000">
       <h1 class="display-none">Raphaël <span class="gold">D</span>orce</h1>
       <a class="rd-logo" href="index.html">
         <img src="./images/logo_rd.svg" alt="logo du site de raphael dorce" />
@@ -58,19 +58,39 @@
     <section class="hero-section">
       <article class="hero-article">
         <h1 class="wave-h1">
-          <span class="gold" style="--i: 1">R</span>
-          <span style="--i: 2">A</span>
-          <span style="--i: 3">P</span>
-          <span style="--i: 4">H</span>
-          <span style="--i: 5">A</span>
-          <span style="--i: 6">Ë</span>
-          <span style="--i: 7">L</span>
+          <span
+            data-aos="fade"
+            data-aos-duration="200"
+            class="gold"
+            style="--i: 1"
+            >R</span
+          >
+          <span data-aos="fade" data-aos-duration="400" style="--i: 2">A</span>
+          <span data-aos="fade" data-aos-duration="600" style="--i: 3">P</span>
+          <span data-aos="fade" data-aos-duration="800" style="--i: 4">H</span>
+          <span data-aos="fade" data-aos-duration="1000" style="--i: 5">A</span>
+          <span data-aos="fade" data-aos-duration="1200" style="--i: 6">Ë</span>
+          <span data-aos="fade" data-aos-duration="1400" style="--i: 7">L</span>
           <span style="--i: 8"> </span>
-          <span class="gold" style="--i: 9">D</span>
-          <span style="--i: 10">O</span>
-          <span style="--i: 11">R</span>
-          <span style="--i: 12">C</span>
-          <span style="--i: 13">E</span>
+          <span
+            data-aos="fade"
+            data-aos-duration="900"
+            class="gold"
+            style="--i: 9"
+            >D</span
+          >
+          <span data-aos="fade" data-aos-duration="1600" style="--i: 10"
+            >O</span
+          >
+          <span data-aos="fade" data-aos-duration="1800" style="--i: 11"
+            >R</span
+          >
+          <span data-aos="fade" data-aos-duration="2000" style="--i: 12"
+            >C</span
+          >
+          <span data-aos="fade" data-aos-duration="2200" style="--i: 13"
+            >E</span
+          >
         </h1>
         <h2>Developpeur Web</h2>
         <h2>Developpeur Web</h2>
@@ -123,7 +143,9 @@
     <!--------------------------------------------- PROJETS -->
 
     <section class="projets-section">
-      <h2><span class="gold">M</span>es <span class="gold">P</span>rojets</h2>
+      <h2 data-aos="fade-up" data-aos-duration="2000">
+        <span class="gold">M</span>es <span class="gold">P</span>rojets
+      </h2>
       <div class="projets-grid">
         <!--------------------------------------------- SINGLE PROJET -->
 
@@ -215,7 +237,7 @@
     <!--------------------------------------------- COMPETENCES -->
 
     <section class="competences-section">
-      <h2>
+      <h2 data-aos="fade-up" data-aos-duration="2000">
         <span class="gold">M</span>es <span class="gold">C</span>ompétences
       </h2>
       <article class="competences-article">
@@ -231,8 +253,8 @@
     <!--------------------------------------------- FOOTER -->
 
     <footer>
-      <h2>© 2021 Raphael Dorce.</h2>
-      <h2>All rights reserved.</h2>
+      <h2 data-aos="fade" data-aos-duration="1000">© 2021 Raphael Dorce.</h2>
+      <h2 data-aos="fade" data-aos-duration="1000">All rights reserved.</h2>
     </footer>
 
     <!--------------------------------------------- EFFET EAU -->
@@ -242,7 +264,10 @@
 
     <!--------------------------------------------- AOS -->
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
     <!--------------------------------------------- SCRIPT -->
 
