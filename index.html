@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Raphael Dorce Portfolio</title>
+    <link rel="shortcut icon" type="" href="./images/logo_rd.svg" />
     <link rel="stylesheet" href="style.css" />
 
     <!--------------------------------------------- AOS -->
@@ -27,7 +28,7 @@
 
     <!--------------------------------------------- NAV -->
 
-    <nav data-aos="fade" data-aos-duration="2000">
+    <nav>
       <h1 class="display-none">Raphaël <span class="gold">D</span>orce</h1>
       <a class="rd-logo" href="index.html">
         <img src="./images/logo_rd.svg" alt="logo du site de raphael dorce" />
@@ -143,11 +144,11 @@
     <!--------------------------------------------- PROJETS -->
 
     <section class="projets-section">
-      <h2 data-aos="fade-up" data-aos-duration="2000">
+      <h2 data-aos="fade" data-aos-duration="2000">
         <span class="gold">M</span>es <span class="gold">P</span>rojets
       </h2>
       <div class="projets-grid">
-        <!--------------------------------------------- SINGLE PROJET -->
+        <!--------------------------------------------- PROJET 1 -->
 
         <article class="projets-article" href="#modal1">
           <div class="projet-preview">
@@ -163,7 +164,7 @@
             </div>
           </div>
         </article>
-        <!--------------------------------------------- SINGLE PROJET -->
+        <!--------------------------------------------- PROJET 2 -->
 
         <article class="projets-article" href="#modal2">
           <div class="projet-preview">
@@ -178,11 +179,27 @@
             </div>
           </div>
         </article>
+        <!--------------------------------------------- PROJET 3 -->
+
+        <article class="projets-article" href="#modal3">
+          <div class="projet-preview">
+            <div
+              class="projet-preview-img"
+              style="
+                background: url(./images/projet_grahoot_preview.png)
+                  center/cover;
+              "
+            ></div>
+            <div class="projet-preview-infos">
+              <p>Projet Grahoot</p>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
     <!--------------------------------------------- MODALS -->
 
-    <!--------------------------------------------- SINGLE MODAL -->
+    <!--------------------------------------------- MODAL 1 -->
 
     <div class="modal-overlay" id="modal1">
       <div class="modal-container">
@@ -212,7 +229,7 @@
         </article>
       </div>
     </div>
-    <!--------------------------------------------- SINGLE MODAL -->
+    <!--------------------------------------------- MODAL 2 -->
 
     <div class="modal-overlay" id="modal2">
       <div class="modal-container">
@@ -234,10 +251,39 @@
         </article>
       </div>
     </div>
+    <!--------------------------------------------- MODAL 3 -->
+
+    <div class="modal-overlay" id="modal3">
+      <div class="modal-container">
+        <article class="modal-projet">
+          <div class="modal-projet-img">
+            <h2>Projet <span class="gold">Grahoot</span></h2>
+            <img
+              src="./images/projet_grahoot_website.png"
+              alt="image du site web Grahoot de Raphael Dorce"
+            />
+          </div>
+          <div class="modal-projet-infos">
+            <p>
+              Créer un site de quiz <span class="gold">responsive</span> avec un
+              système de <span class="gold">points</span>, un
+              <span class="gold">timer</span> pour les questions, un design
+              moderne
+            </p>
+            <a
+              href="https://raphaeld.promo-66.codeur.online/Projet_Grahoot/"
+              target="blank"
+              >Aller sur le <span class="gold">site</span>
+            </a>
+          </div>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </article>
+      </div>
+    </div>
     <!--------------------------------------------- COMPETENCES -->
 
     <section class="competences-section">
-      <h2 data-aos="fade-up" data-aos-duration="2000">
+      <h2 data-aos="fade" data-aos-duration="2000">
         <span class="gold">M</span>es <span class="gold">C</span>ompétences
       </h2>
       <article class="competences-article">

@@ -5,7 +5,7 @@
 // });
 
 window.addEventListener("DOMContentLoaded", function () {
-  // waterEffect();
+  waterEffect();
   // waveEffect();
   navSwitch();
 });
@@ -188,8 +188,8 @@ for (var i = 0; i < modalBtn.length; i++) {
   modalBtn[i].onclick = function (e) {
     e.preventDefault();
     modal = document.querySelector(e.currentTarget.getAttribute("href"));
-    $("nav").fadeOut();
     $(modal).fadeIn();
+    $("nav").fadeOut();
   };
 }
 
