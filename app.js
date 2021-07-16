@@ -5,8 +5,8 @@
 // });
 
 window.addEventListener("DOMContentLoaded", function () {
-  waterEffect();
-  // waveEffect();
+  // waterEffect();
+  waveEffect();
   navSwitch();
 });
 
