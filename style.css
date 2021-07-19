@@ -21,21 +21,22 @@
 }
 
 body {
-  font-family: "Nova Round", cursive;
-  font-size: 1rem;
   color: var(--blue-primary);
+  font-family: "Nova Round", cursive;
+  line-height: 1.25;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 h1,
 h2,
 h3,
-h4 {
-  line-height: 1;
-}
-
-h3 {
-  font-family: "Comfortaa", cursive;
-  font-style: italic;
+h4,
+h5,
+h6,
+p {
+  line-height: 1.25;
+  font-weight: 500;
 }
 
 ul {
@@ -59,7 +60,6 @@ a:active {
   margin: 0 auto 3rem;
   padding: 0.25rem 0.25rem;
   text-align: center;
-  font-weight: 100;
   border-bottom: 1px var(--gold) solid;
 }
 
@@ -93,6 +93,7 @@ nav {
 }
 
 nav h1 {
+  font-weight: 700;
   font-size: 0.75rem;
   justify-self: left;
   transition: 0.5s all;
@@ -205,7 +206,7 @@ nav img {
   0% {
   }
   100% {
-    max-height: 20rem;
+    max-height: 25rem;
     opacity: 1;
   }
 }
@@ -255,6 +256,7 @@ nav img {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .wave-h1 {
@@ -290,7 +292,6 @@ nav img {
   width: 14rem;
   position: absolute;
   padding: 0.25rem 0.25rem;
-  font-weight: 100;
   border-bottom: 1px var(--gold) solid;
   opacity: 0;
   animation: 1.5s ease-out 1s 1 forwards running fadeIn;
@@ -337,6 +338,11 @@ nav img {
   max-height: 0rem;
   opacity: 0;
   overflow: hidden;
+}
+
+.citation-article h3 {
+  font-family: "Comfortaa", cursive;
+  font-style: italic;
 }
 
 .citation-article h3:nth-of-type(1):first-letter {
@@ -422,7 +428,7 @@ nav img {
 }
 
 .cv-btn {
-  margin-top: 3rem;
+  margin-top: 2rem;
   background: #ffffff;
   font-size: 1rem;
   color: var(--blue-primary);
@@ -432,6 +438,7 @@ nav img {
   padding: 0.5rem 3rem;
   opacity: 0;
   transition: all 0.5s;
+  font-weight: 600;
 }
 
 .cv-btn:hover {
@@ -532,6 +539,7 @@ nav img {
   background: white;
   color: var(--blue-primary);
   transition: all 0.5s;
+  font-weight: 600;
 }
 
 .projet-preview:hover .projet-preview-infos {
@@ -566,16 +574,17 @@ nav img {
   overflow: hidden;
 }
 
-.competences-article h5:nth-of-type(odd) {
-  justify-self: left;
+.competences-article h5 {
+  font-weight: 600;
   padding: 0 1rem;
   opacity: 0;
+}
+.competences-article h5:nth-of-type(odd) {
+  justify-self: left;
 }
 
 .competences-article h5:nth-of-type(even) {
   justify-self: right;
-  padding: 0 1rem;
-  opacity: 0;
 }
 
 .competences-article h5:nth-of-type(1) {
@@ -636,6 +645,46 @@ nav img {
   font-size: 5rem;
 }
 
+/*------------------------------------------- CONTACT */
+.contact-section {
+  padding: 10rem 0;
+  background: url(./images/seigaiha.png);
+  background-repeat: repeat;
+  animation: animatedBackgroundRight 1500s linear infinite;
+}
+
+.contact-article {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  row-gap: 1rem;
+  margin: 2rem auto;
+  color: var(--blue-primary);
+}
+
+.contact-article h2 {
+  font-size: 1.25rem;
+}
+
+.contact-article h3 {
+  font-size: 1rem;
+  margin-top: 3rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.contact-article a {
+  color: var(--blue-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.contact-article a:hover {
+  color: rgb(225, 200, 150);
+}
+
 /*------------------------------------------- FOOTER */
 footer {
   display: grid;
@@ -644,15 +693,16 @@ footer {
 }
 
 footer h2:nth-of-type(1) {
+  font-weight: 700;
   padding: 1.5rem 0.25rem;
   text-align: right;
   border-top: 1px var(--gold) solid;
-  background: url(./images/ripples.png);
   background-repeat: repeat;
   animation: animatedBackgroundLeft 1500s linear infinite;
 }
 
 footer h2:nth-of-type(2) {
+  font-weight: 700;
   padding: 1.5rem 0.25rem;
   border-top: 1px var(--gold) solid;
   border-left: 1px var(--gold) solid;
@@ -699,13 +749,13 @@ footer h2:nth-of-type(2) {
   text-decoration: underline;
   font-size: 1.2rem;
   text-align: center;
+  font-weight: 600;
 }
 
 .modal-projet-img img {
   margin-top: 1.5rem;
   border-radius: 10px;
   width: 100%;
-  /* border: 2px solid var(--blue-secondary); */
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 }
 
@@ -730,6 +780,7 @@ footer h2:nth-of-type(2) {
   color: var(--blue-primary);
   border: 2px solid var(--blue-secondary);
   border-radius: 10px;
+  font-weight: 600;
 }
 
 .modal-projet-infos a:hover {

@@ -5,7 +5,9 @@
 // });
 
 window.addEventListener("DOMContentLoaded", function () {
-  // waterEffect();
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    waterEffect();
+  }
   waveEffect();
   navSwitch();
 });
