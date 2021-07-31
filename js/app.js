@@ -6,9 +6,9 @@
 
 window.addEventListener("DOMContentLoaded", function () {
   if (window.matchMedia("(min-width: 768px)").matches) {
-    waterEffect();
+    // waterEffect();
+    waveEffect();
   }
-  waveEffect();
   navSwitch();
 });
 
@@ -36,7 +36,7 @@ function waveEffect() {
 }
 
 /*------------------------------------------- NAV SWITCH */
-
+console.log();
 const nav = document.querySelector("nav");
 const navh1 = document.querySelector("nav h1");
 const hero = document.querySelector(".hero-section");
@@ -75,6 +75,7 @@ const options = {
   threshold: ratio,
 };
 
+/*------------------------------------------- OBSERV CITATION */
 const observerCitation = new IntersectionObserver(citationAnimation, options);
 observerCitation.observe(document.querySelector(".citation-section"));
 
@@ -98,6 +99,7 @@ function citationAnimation(entries, observer) {
   });
 }
 
+/*------------------------------------------- OBSERV INTRO */
 const observerIntro = new IntersectionObserver(introAnimation, options);
 observerIntro.observe(document.querySelector(".intro-section"));
 
@@ -121,6 +123,7 @@ function introAnimation(entries, observer) {
   });
 }
 
+/*------------------------------------------- OBSERV BIENVENUE */
 const observerBienvenue = new IntersectionObserver(bienvenueAnimation, options);
 observerBienvenue.observe(document.querySelector(".bienvenue-section"));
 
@@ -136,6 +139,7 @@ function bienvenueAnimation(entries, observer) {
   });
 }
 
+/*------------------------------------------- OBSERV PROJETS */
 const observerProjet = new IntersectionObserver(projetsAnimation, options);
 observerProjet.observe(document.querySelector(".projets-section"));
 
@@ -148,12 +152,14 @@ function projetsAnimation(entries, observer) {
       });
       document.querySelectorAll(".projet-preview").forEach(function (preview) {
         preview.style.animation =
-          "1s ease-in-out 1s 1 forwards running articleEaseInOut";
+          "1.5s ease-in-out 0.5s 1 forwards running articleEaseInOut";
       });
       observer.unobserve(entry.target);
     }
   });
 }
+
+/*------------------------------------------- OBSERV COMPETENCES */
 
 const observerCompetences = new IntersectionObserver(
   competencesAnimation,
@@ -177,8 +183,8 @@ function competencesAnimation(entries, observer) {
 }
 
 /*------------------------------------------- MODAL */
-
-// Get the button that opens the modal
+console.log("bruhh");
+// Get the button that opens the modal!!!
 var modalBtn = document.querySelectorAll(".projets-article");
 // All page modals
 var modals = document.querySelectorAll(".modal-overlay");

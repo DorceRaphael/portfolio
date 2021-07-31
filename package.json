@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Creation de mon portfolio personnel.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV='production' webpack",
+    "start": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DorceRaphael/portfolio.git"
+  },
+  "author": "raphael dorce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DorceRaphael/portfolio/issues"
+  },
+  "homepage": "https://github.com/DorceRaphael/portfolio#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.46.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
