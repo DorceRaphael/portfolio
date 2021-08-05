@@ -14,14 +14,14 @@ window.addEventListener("DOMContentLoaded", function () {
 
 /*------------------------------------------- EFFET EAU */
 
-function waterEffect() {
-  $(document).ready(function () {
-    $(".hero-article").ripples("show");
-  });
-  $(document).ready(function () {
-    $(".projet-preview-img").ripples("show");
-  });
-}
+// function waterEffect() {
+//   $(document).ready(function () {
+//     $(".hero-article").ripples("show");
+//   });
+//   $(document).ready(function () {
+//     $(".projet-preview-img").ripples("show");
+//   });
+// }
 
 /*------------------------------------------- EFFET VAGUE */
 
@@ -66,124 +66,7 @@ function navSwitch() {
   });
 }
 
-/*------------------------------------------- INTERSECTION OBSERVER */
-
-const ratio = 0.95;
-const options = {
-  root: null,
-  rootMargin: "0px",
-  threshold: ratio,
-};
-
-/*------------------------------------------- OBSERV CITATION */
-const observerCitation = new IntersectionObserver(citationAnimation, options);
-observerCitation.observe(document.querySelector(".citation-section"));
-
-function citationAnimation(entries, observer) {
-  entries.forEach(function (entry) {
-    if (entry.intersectionRatio > ratio) {
-      document.querySelector(".citation-article").style.animation =
-        "1s ease-in-out 0s 1 forwards running articleBorder";
-      document.querySelector(
-        ".citation-article h3:nth-of-type(1)"
-      ).style.animation =
-        "1s ease-in-out 0.25s 1 forwards running articleEaseInOut";
-      document.querySelector(
-        ".citation-article h3:nth-of-type(2)"
-      ).style.animation =
-        "1s ease-in-out 0.5s 1 forwards running articleEaseInOut";
-      document.querySelector(".citation-article p").style.animation =
-        "1s ease-in-out 2s 1 forwards running articleEaseInOut";
-      observer.unobserve(entry.target);
-    }
-  });
-}
-
-/*------------------------------------------- OBSERV INTRO */
-const observerIntro = new IntersectionObserver(introAnimation, options);
-observerIntro.observe(document.querySelector(".intro-section"));
-
-function introAnimation(entries, observer) {
-  entries.forEach(function (entry) {
-    if (entry.intersectionRatio > ratio) {
-      document.querySelector(".intro-article").style.animation =
-        "1s ease-in-out 0s 1 forwards running articleBorder";
-      document.querySelector(
-        ".intro-article p:nth-of-type(1)"
-      ).style.animation =
-        "1s ease-in-out 0.25s 1 forwards running articleEaseInOut";
-      document.querySelector(
-        ".intro-article p:nth-of-type(2)"
-      ).style.animation =
-        "1s ease-in-out 0.5s 1 forwards running articleEaseInOut";
-      document.querySelector(".cv-btn").style.animation =
-        "1s ease-in-out 0.75s 1 forwards running articleEaseInOut";
-      observer.unobserve(entry.target);
-    }
-  });
-}
-
-/*------------------------------------------- OBSERV BIENVENUE */
-const observerBienvenue = new IntersectionObserver(bienvenueAnimation, options);
-observerBienvenue.observe(document.querySelector(".bienvenue-section"));
-
-function bienvenueAnimation(entries, observer) {
-  entries.forEach(function (entry) {
-    if (entry.intersectionRatio > ratio) {
-      document.querySelector(".bienvenue-article").style.animation =
-        "1s ease-in-out 0s 1 forwards running articleBorder";
-      document.querySelector(".bienvenue-article p").style.animation =
-        "1s ease-in-out 0.25s 1 forwards running articleEaseInOut";
-      observer.unobserve(entry.target);
-    }
-  });
-}
-
-/*------------------------------------------- OBSERV PROJETS */
-const observerProjet = new IntersectionObserver(projetsAnimation, options);
-observerProjet.observe(document.querySelector(".projets-section"));
-
-function projetsAnimation(entries, observer) {
-  entries.forEach(function (entry) {
-    if (entry.intersectionRatio > ratio) {
-      document.querySelectorAll(".projets-article").forEach(function (projet) {
-        projet.style.animation =
-          "1s ease-in-out 0s 1 forwards running articleBorder";
-      });
-      document.querySelectorAll(".projet-preview").forEach(function (preview) {
-        preview.style.animation =
-          "1.5s ease-in-out 0.5s 1 forwards running articleEaseInOut";
-      });
-      observer.unobserve(entry.target);
-    }
-  });
-}
-
-/*------------------------------------------- OBSERV COMPETENCES */
-
-const observerCompetences = new IntersectionObserver(
-  competencesAnimation,
-  options
-);
-observerCompetences.observe(document.querySelector(".competences-section"));
-
-function competencesAnimation(entries, observer) {
-  entries.forEach(function (entry) {
-    if (entry.intersectionRatio > ratio) {
-      document.querySelector(".competences-article").style.animation =
-        "1s ease-in-out 0s 1 forwards running articleBorder";
-      document
-        .querySelectorAll(".competences-article h5")
-        .forEach(function (h5) {
-          h5.style.opacity = "1";
-        });
-      observer.unobserve(entry.target);
-    }
-  });
-}
-
 /*------------------------------------------- MODAL */
-console.log("bruhh");
 // Get the button that opens the modal!!!
 var modalBtn = document.querySelectorAll(".projets-article");
 // All page modals

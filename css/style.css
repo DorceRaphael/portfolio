@@ -46,6 +46,8 @@ a:active {
 }
 
 .section-title {
+  position: relative;
+  z-index: 10;
   width: 16rem;
   margin: 0 auto 3rem;
   padding: 0.25rem 0.25rem;
@@ -103,7 +105,7 @@ nav h1::first-letter {
   justify-self: left;
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(192deg)
     brightness(102%) contrast(104%);
-  transition: 0.2s all ease-in-out;
+  transition: 0.1s all;
 }
 
 .rd-logo:hover {
@@ -125,7 +127,7 @@ nav img {
 .social-icon {
   font-size: 1.25rem;
   color: #ffffff;
-  transition: 0.2s all ease-in-out;
+  transition: 0.1s all;
 }
 
 .social-icon:hover {
@@ -175,6 +177,7 @@ nav img {
 
 /* WAVE LETTER EFFECT */
 .wave {
+  z-index: 5;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -188,15 +191,12 @@ nav img {
 }
 .wave span {
   display: inline-block;
-  /* color: rgba(0, 0, 0, 0.01);
-  animation: rise 5s infinite ease-in-out;
-  animation-delay: calc((var(--index) * 0.225s));
-  transform: translate(0, 20%); */
-  transition: all 0.1s ease-in-out;
+  transition: all 1s;
 }
 
 .wave span:hover {
   color: rgba(225, 200, 150, 0.5);
+  transition: all 0s;
 }
 
 @keyframes rise {
@@ -205,7 +205,6 @@ nav img {
   }
 
   50% {
-    /* color: rgba(0, 0, 0, 0.02); */
     -webkit-text-stroke: 2px rgba(12, 40, 51, 0.05);
     transform: translate(0, -10%);
   }
@@ -262,7 +261,7 @@ nav img {
   }
 }
 
-.hero-article h1 {
+.hero-article h2 {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -271,20 +270,22 @@ nav img {
   font-size: 2.5rem;
   font-weight: 600;
   color: white;
+  opacity: 0;
+  animation: 1s ease-out 0.25s 1 forwards running fadeIn;
 }
 
-.wave-h1 {
+.wave-h2 {
   position: relative;
   -webkit-box-reflect: below -2px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
 }
-.wave-h1 span {
+.wave-h2 span {
   position: relative;
   display: inline-block;
-  animation: waveh1 7.5s ease-in-out infinite;
+  animation: waveh2 7.5s ease-in-out infinite;
   animation-delay: calc(0.5s * var(--i));
 }
 
-@keyframes waveh1 {
+@keyframes waveh2 {
   0% {
     transform: translateY(0px);
   }
@@ -296,27 +297,27 @@ nav img {
   }
 }
 
-.hero-article h1::first-letter {
+.hero-article h2::first-letter {
   color: #a77b00;
 }
 
-.hero-article h2 {
+.hero-article h3 {
   position: absolute;
   width: 18rem;
   padding: 0.25rem 0.25rem;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   opacity: 0;
-  animation: 1.5s ease-out 1s 1 forwards running fadeIn;
+  animation: 1s ease-out 1.25s 1 forwards running fadeIn;
 }
-.hero-article h2:nth-of-type(1) {
+.hero-article h3:nth-of-type(1) {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 1);
   border-bottom: 2px #a77b00 solid;
 }
-.hero-article h2:nth-of-type(2) {
+.hero-article h3:nth-of-type(2) {
   top: 66%;
   right: 50%;
   transform: matrix(1, 0, 0, -1, 0, 0) translate(50%, 50%);
@@ -342,34 +343,26 @@ nav img {
   align-items: center;
   row-gap: 0.5rem;
   border-left: 2px #a77b00 solid;
-  max-height: 0rem;
-  opacity: 0;
-  overflow: hidden;
 }
 
 .citation-article h3 {
   font-style: italic;
   font-size: 1.5rem;
-  opacity: 0;
-  z-index: 99;
+  z-index: 10;
 }
 .citation-article h3:nth-of-type(1) {
   grid-area: 1/1/2/2;
   justify-self: left;
-  margin-left: -50vw;
 }
 .citation-article h3:nth-of-type(2) {
   grid-area: 2/1/2/2;
   justify-self: right;
-  margin-right: -50vw;
 }
 
 .citation-article p {
   margin-top: 4rem;
   justify-self: right;
-  margin-left: -100vw;
   font-size: 1rem;
-  opacity: 0;
 }
 .citation-article p::first-letter {
   color: #a77b00;
@@ -379,8 +372,8 @@ nav img {
 .intro-section {
   background: url(../images/ripples.png);
   background-repeat: repeat;
-  animation: animatedBackgroundLeft 1500s linear infinite;
   padding: 4rem 0;
+  animation: animatedBackgroundLeft 1500s linear infinite;
 }
 
 .intro-article {
@@ -394,34 +387,22 @@ nav img {
   text-align: center;
   font-size: 1.25rem;
   border-left: 2px #0b0b40 solid;
-  max-height: 0rem;
-  opacity: 0;
   overflow: hidden;
 }
 
 .intro-article p {
   font-size: 1.25rem;
 }
-.intro-article p:nth-of-type(1) {
-  margin-left: -100vw;
-  opacity: 0;
-}
-.intro-article p:nth-of-type(2) {
-  margin-left: -100vw;
-  opacity: 0;
-}
 
 .cv-btn {
   margin-top: 4rem;
-  margin-left: -100vw;
   padding: 0.5rem 3rem;
   background: #ffffff;
   font-size: 1rem;
   color: #0c2833;
   border: 2px solid #0b0b40;
   border-radius: 10px;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s;
 }
 .cv-btn:hover {
   background: #e1c896;
@@ -444,17 +425,12 @@ nav img {
   align-items: center;
   text-align: center;
   border-left: 2px #a77b00 solid;
-  max-height: 0rem;
-  opacity: 0;
-  overflow: hidden;
 }
 
 .bienvenue-article p {
   font-size: 1.5rem;
   font-style: italic;
-  margin-left: -100vw;
-  opacity: 0;
-  z-index: 99;
+  z-index: 10;
 }
 
 /*------------------------------------------- PROJETS */
@@ -480,18 +456,14 @@ nav img {
   width: 100%;
   padding: 0.5rem 0.5rem;
   border-left: 2px #0b0b40 solid;
-  opacity: 0;
-  max-height: 0rem;
   overflow: hidden;
 }
 
 .projet-preview {
   width: 100%;
   height: 12.5rem;
-  margin-left: -100vw;
   border-radius: 5px 5px 10px 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-  opacity: 0;
   cursor: pointer;
 }
 
@@ -509,7 +481,7 @@ nav img {
   padding: 1rem;
   background: white;
   color: #0c2833;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.1s;
   font-weight: 600;
 }
 .projet-preview-infos p::first-letter {
@@ -542,15 +514,11 @@ nav img {
   justify-items: center;
   align-items: center;
   border-left: 2px #a77b00 solid;
-  opacity: 0;
-  max-height: 0rem;
-  overflow: hidden;
 }
 
 .competences-article h5 {
   padding: 0 1rem;
-  opacity: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .competences-article h5:nth-of-type(odd) {
   justify-self: left;
@@ -562,43 +530,36 @@ nav img {
   grid-area: 1/2/2/3;
   color: #383f51;
   border-left: 2px #383f51 solid;
-  transition: all 1s ease-in-out 1s;
 }
 .competences-article h5:nth-of-type(2) {
   grid-area: 2/1/3/2;
   color: #5f6b68;
   border-right: 2px #5f6b68 solid;
-  transition: all 1s ease-in-out 1.25s;
 }
 .competences-article h5:nth-of-type(3) {
   grid-area: 3/2/4/3;
   color: #a77b00;
   border-left: 2px #a77b00 solid;
-  transition: all 1s ease-in-out 1.5s;
 }
 .competences-article h5:nth-of-type(4) {
   grid-area: 4/1/5/2;
   color: #0c2833;
   border-right: 2px #0c2833 solid;
-  transition: all 1s ease-in-out 1.75s;
 }
 .competences-article h5:nth-of-type(5) {
   grid-area: 5/2/6/3;
   color: #5f6b68;
   border-left: 2px #5f6b68 solid;
-  transition: all 1s ease-in-out 2s;
 }
 .competences-article h5:nth-of-type(6) {
   grid-area: 6/1/7/2;
   color: #a77b00;
   border-right: 2px #a77b00 solid;
-  transition: all 1s ease-in-out 2.25s;
 }
 .competences-article h5:nth-of-type(7) {
   grid-area: 7/2/8/3;
   color: #383f51;
   border-left: 2px #383f51 solid;
-  transition: all 1s ease-in-out 2.5s;
 }
 
 /*------------------------------------------- CONTACT */
@@ -611,14 +572,20 @@ nav img {
 
 .contact-article {
   width: 90vw;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  margin: 2rem auto;
+  color: #0c2833;
+  border-left: 2px #0b0b40 solid;
+}
+
+.contact-grid {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
   text-align: center;
   row-gap: 1rem;
-  margin: 2rem auto;
-  color: #0c2833;
 }
 
 .contact-article h2 {
@@ -636,7 +603,7 @@ nav img {
   color: #0c2833;
   font-size: 1.25rem;
   font-weight: 600;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.1s;
 }
 .contact-article a:hover {
   color: #e1c896;
@@ -731,7 +698,7 @@ footer h2:nth-of-type(2) {
   color: #0c2833;
   border: 2px solid #0b0b40;
   border-radius: 10px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s;
 }
 
 .modal-projet-infos a:hover {
@@ -747,7 +714,7 @@ footer h2:nth-of-type(2) {
   background: transparent;
   border-color: transparent;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s;
 }
 
 .close-btn:hover {
@@ -779,7 +746,7 @@ footer h2:nth-of-type(2) {
     font-size: 1.5rem;
   }
 
-  .hero-article h1 {
+  .hero-article h2 {
     width: 45rem;
     font-size: 3.25rem;
   }
@@ -824,7 +791,7 @@ footer h2:nth-of-type(2) {
 }
 
 @media screen and (min-width: 1024px) {
-  .hero-article h1 {
+  .hero-article h2 {
     width: 62rem;
     font-size: 4.75rem;
   }
