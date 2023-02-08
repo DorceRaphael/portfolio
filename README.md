@@ -2,7 +2,7 @@
 
 Creation de mon portfolio personnel.
 
-(:warning: OBSOLETE :warning: , le repo actuel est privé)
+(:warning: OBSOLETE :warning:, le repo de mon portfolio actuel est privé)
 
 ## Langages et outils utilisés
 
